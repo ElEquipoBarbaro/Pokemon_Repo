@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://vc4k5p6ygl8h"]
+
+[ext_resource type="Texture2D" uid="uid://svi64fulbnyp" path="res://Assets/Player/Male_Spritesheet.png" id="1_x5mr4"]
+
+[node name="Town" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(33.75, -16.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(-33.75, -15.75)
+texture = ExtResource("1_x5mr4")
+centered = false
+hframes = 3
+vframes = 3
