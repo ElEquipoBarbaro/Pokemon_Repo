@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxvqy1p72v240"]
+
+[ext_resource type="Script" uid="uid://byqthw8yeaoh5" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://ecw64a5ibh3o" path="res://bat-NESW.png" id="1_7k104"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7k104"]
+radius = 0.262559
+height = 0.525118
+
+[node name="Enemy" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58307e-05, 0.0020529, 0)
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0507304, 0.00561053, 0)
+texture = ExtResource("1_7k104")
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -0.00326124, 0, -0.0073697)
+shape = SubResource("CapsuleShape3D_7k104")

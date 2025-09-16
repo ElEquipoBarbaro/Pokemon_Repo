@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://q7ww4gpypumt"]
+
+[ext_resource type="Script" uid="uid://dbvr3byhhpo2y" path="res://character_body_3d.gd" id="1_kdlqw"]
+[ext_resource type="Texture2D" uid="uid://bukngsiwvsxba" path="res://Iris Version2.png" id="2_nd3kr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kdlqw"]
+radius = 0.335582
+height = 0.816361
+
+[sub_resource type="Animation" id="Animation_nd3kr"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_kdlqw"]
+resource_name = "caminar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.633333, 1.13333, 1.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nd3kr"]
+_data = {
+&"RESET": SubResource("Animation_nd3kr"),
+&"caminar": SubResource("Animation_kdlqw")
+}
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_kdlqw")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("2_nd3kr")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0180926, 0.0676801, 0)
+shape = SubResource("CapsuleShape3D_kdlqw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0506585, -0.0732122, 0.976207)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nd3kr")
+}

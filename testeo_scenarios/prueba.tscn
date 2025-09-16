@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cpa82uhy1fxwl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
