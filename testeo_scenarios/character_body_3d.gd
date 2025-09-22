@@ -21,6 +21,8 @@ var combate_scene: PackedScene = load("res://combate.tscn")
 func _ready():
 	# Guardar la posición original de la cámara
 	camera_original_position = $Camera3D.position
+	add_to_group("CHARA")
+	
 
 func update_animation_row(input_dir: Vector2):
 	if input_dir == abajo:
@@ -129,3 +131,5 @@ func _physics_process(delta: float) -> void:
 			# Iniciar efecto de cámara (SIN pausar todavía)
 			camera_transition_effect()
 			break
+		
+		
