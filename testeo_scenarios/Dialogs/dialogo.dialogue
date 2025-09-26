@@ -1,6 +1,20 @@
-Carlitos: No te he presentado a [wait=2] Marcelo
+~ inicio
+Carlitos: No te he presentado a Marcelo
 Tu: Marcelo ?
-Carlitos: [speed=0.5]Agachate y [wave]conocelo[/wave]
-%2 Tu: Te arrancare la cara
-%4 Tu: Chistosito , dejame te presento a mi puño
-%1 Tu: No dio gracia
+Carlitos: Agáchate y conócelo
+
+- Hablar con Carlitos
+    do debug("OPCIÓN: HABLAR")
+    => hablar
+
+- Desafiar a Carlitos
+    do debug("OPCIÓN: DESAFIAR")
+    => desafiar
+
+~ hablar
+Tu: Un gusto, Carlitos.
+=> END
+
+~ desafiar
+Tu: Te desafío ahora mismo.
+=> END
