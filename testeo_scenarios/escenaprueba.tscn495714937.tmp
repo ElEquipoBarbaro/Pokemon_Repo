@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://i3lcoawwgdlp"]
+
+[ext_resource type="PackedScene" uid="uid://2fqx736c63m8" path="res://npc/escena_npc.tscn" id="1_stini"]
+[ext_resource type="PackedScene" uid="uid://q7ww4gpypumt" path="res://personaje_principal.tscn" id="2_stini"]
+[ext_resource type="Texture2D" uid="uid://b17wrneqqsjn7" path="res://Sky_Clouds_Photo_Texture_A_P4101916.jpeg" id="3_r05mj"]
+[ext_resource type="PackedScene" uid="uid://cxvqy1p72v240" path="res://enemy.tscn" id="4_r05mj"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gvbh6"]
+panorama = ExtResource("3_r05mj")
+
+[sub_resource type="Sky" id="Sky_xwyv1"]
+sky_material = SubResource("PanoramaSkyMaterial_gvbh6")
+
+[sub_resource type="Environment" id="Environment_q2kgp"]
+background_mode = 2
+sky = SubResource("Sky_xwyv1")
+
+[node name="World1" type="Node3D"]
+transform = Transform3D(0.999981, -0.00331198, 0.00520515, 0.0032784, 0.999974, 0.00644889, -0.00522636, -0.00643171, 0.999966, 0, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1.53917, 0, 0, 0, 1, 0, 0, 0, 1, -2.29725, 1.19209e-07, -0.182622)
+use_collision = true
+size = Vector3(1, 1, 1.58252)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.999996, -0.00292874, 0.000273915, 0.00292893, 0.999996, -0.00068101, -0.000271933, 0.000681804, 1, -0.652187, -0.746986, -1.16608)
+use_collision = true
+collision_layer = 65535
+size = Vector3(12.2737, 1, 9.39941)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q2kgp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.820391, -0.487072, -0.299531, 0, -0.523837, 0.851818, -0.571802, -0.698825, -0.429752, -2.53178, 3.78884, -2.13791)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_stini")]
+transform = Transform3D(0.999975, 0.00625011, -0.00338032, -0.00622043, 0.999943, 0.0087193, 0.00343463, -0.00869805, 0.999956, 2.51579, 2.43718, 0.0424242)
+
+[node name="Enemy" parent="." instance=ExtResource("4_r05mj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71747, -0.200505)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.977542, -0.0113044, -1.61426)
+use_collision = true
+size = Vector3(1, 1, 4.22852)
+
+[node name="CharacterBody3D2" parent="." instance=ExtResource("1_stini")]
+transform = Transform3D(1.00838, 0, 0, 0, 1.00838, 0, 0, 0, 1.00838, -2.2408, 0.83748, -0.540764)

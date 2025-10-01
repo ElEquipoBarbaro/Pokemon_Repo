@@ -1,20 +1,3 @@
 ~ inicio
-Carlitos: No te he presentado a Marcelo
-Tu: Marcelo ?
-Carlitos: Agáchate y conócelo
-
-- Hablar con Carlitos
-    do debug("OPCIÓN: HABLAR")
-    => hablar
-
-- Desafiar a Carlitos
-    do debug("OPCIÓN: DESAFIAR")
-    => desafiar
-
-~ hablar
-Tu: Un gusto, Carlitos.
-=> END
-
-~ desafiar
-Tu: Te desafío ahora mismo.
-=> END
+Carlitos: Hola
+Tu: Hola
