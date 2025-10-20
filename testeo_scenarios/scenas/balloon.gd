@@ -103,8 +103,14 @@ func apply_dialogue_line() -> void:
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
 	
-	var portrait_path: String = "res://avatars/" + dialogue_line.character.to_lower() + ".jpg"
-	
+	var portrait_id: String = "default"
+	var regex = RegEx.new()
+	regex.compile("\\[portrait=(.*?)\\]")
+	var result = regex.search(dialogue_line.text)
+	if result:
+		portrait_id = result.get_string(1)
+		dialogue_line.text = regex.sub(dialogue_line.text, "")
+	var portrait_path = "res://avatars/" + portrait_id + ".jpg"
 	if FileAccess.file_exists(portrait_path):
 		portrait.texture = load(portrait_path)
 	else:
