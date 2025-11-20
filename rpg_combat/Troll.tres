@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cvim2lsfrvbtn"]
+
+[ext_resource type="Script" uid="uid://clr3wh70r25ti" path="res://Scripts/BaseEnemy.gd" id="1_uk0k1"]
+[ext_resource type="Texture2D" uid="uid://dkpufd6mpnrqp" path="res://Sprites/enemy_troll_1.png" id="2_gca4e"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_uk0k1")
+name = "Troll"
+texture = ExtResource("2_gca4e")
+health = 100
