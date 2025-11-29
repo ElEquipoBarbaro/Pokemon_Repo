@@ -7,34 +7,69 @@ Bienvenido/a al proyecto RPG desarrollado en Godot. Este documento explica la es
 ##  Estructura de Carpetas
 
 ```
-project/
+│   main.tscn
+│   README.md
 │
-├── assets/                # Recursos visuales, sonoros y objetos de juego
-│   ├── sprites/           # Personajes, enemigos, objetos
-│   ├── tilesets/          # Mapas y escenarios
-│   ├── audio/             # Efectos y música
-│   └── ui/                # Elementos de interfaz
+├───assets
+│   ├───audio
+│   │       audio.md
+│   │
+│   ├───sprites
+│   │   │   Sprites.md
+│   │   │
+│   │   ├───enemies
+│   │   │       enemies.md
+│   │   │
+│   │   ├───objetos
+│   │   │       objetos.md
+│   │   │
+│   │   └───players
+│   │           players.md
+│   │
+│   ├───tilesets
+│   │       tilesets.md
+│   │
+│   └───ui
+│           ui.md
 │
-├── scenes/                # Escenas principales del juego
-│   ├── player/            # Jugador y sus estados
-│   ├── enemies/           # Enemigos y IA
-│   ├── maps/              # Mapas y niveles
-│   └── ui/                # Menús y HUD
+├───data
+│       data.md
 │
-├── scripts/               # Código fuente en GDScript
-│   ├── player/            # Movimiento, combate, inventario
-│   ├── enemies/           # Lógica de enemigos
-│   ├── systems/           # Combate, misiones, diálogos
-│   ├── objetos/           # Sprites o recursos visuales para objetos interactivos
-│   └── ui/                # Scripts de interfaz
+├───docs
+│       docs.md
 │
-├── data/                  # Archivos JSON/CSV para misiones, diálogos, items
+├───scenes
+│   ├───enemies
+│   │       enemies.md
+│   │
+│   ├───maps
+│   │       maps.md
+│   │
+│   ├───objetos
+│   │       objetos.md
+│   │
+│   ├───player
+│   │       player.md
+│   │
+│   └───ui
+│           ui.md
 │
-├── docs/                  # Documentación adicional
-│
-├── objetos/               # Objetos interactivos, ítems y recursos del juego
-│
-└── main.tscn              # Escena principal del juego
+└───scripts
+    ├───enemies
+    │       enemies.md
+    │
+    ├───objetos
+    │       objetos.md
+    │
+    ├───player
+    │       player.md
+    │
+    ├───systems
+    │       systems.md
+    │
+    └───ui
+            ui.md
+
 ```
 
 ---
