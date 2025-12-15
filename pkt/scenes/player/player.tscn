@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg8yatw1kshtf"]
+
+[ext_resource type="Texture2D" uid="uid://ouwelljsh0cj" path="res://assets/tilesets/iris.png" id="1_8afob"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x7p2l"]
+height = 1.13846
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.99032, 0, 0, 0, 1.82561, 0, 0, 0, 1, -0.00250146, 0.0690933, 0)
+texture = ExtResource("1_8afob")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_x7p2l")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.20929)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
