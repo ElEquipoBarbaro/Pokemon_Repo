@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cawplbyfooc46"]
+[gd_scene load_steps=7 format=3 uid="uid://cawplbyfooc46"]
 
 [ext_resource type="PackedScene" uid="uid://ri4qvad82lk3" path="res://scenes/player/playerScene.tscn" id="1_pjkh5"]
 [ext_resource type="Texture2D" uid="uid://rj0ewmrhwv4q" path="res://assets/backgrounds/Sky_Clouds_Photo_Texture_A_P4101916.jpeg" id="1_ve0rf"]
+[ext_resource type="PackedScene" uid="uid://2fqx736c63m8" path="res://scenes/npc/escenaNpc.tscn" id="3_ve0rf"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0mmqq"]
 panorama = ExtResource("1_ve0rf")
@@ -43,3 +44,6 @@ size = Vector3(1, 1, 4.22852)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_pjkh5")]
 transform = Transform3D(1, 0.000197639, 0.000131162, -0.000202537, 0.999261, 0.0384393, -0.00012347, -0.0384394, 0.999261, 1.06099, 2.14503, 0.657581)
+
+[node name="CharacterBody3D2" parent="." instance=ExtResource("3_ve0rf")]
+transform = Transform3D(1, 0.000699833, 0.000310541, -0.000670221, 0.996221, -0.0868449, -0.000370146, 0.0868446, 0.996221, -2.13661, 0.893119, -0.00542259)
