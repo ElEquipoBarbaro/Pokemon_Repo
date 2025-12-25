@@ -1,0 +1,34 @@
+{
+  "usuario": {
+    "nombre": "Jugador1",
+    "pwd": "hash_o_password"
+  },
+  "skin": "",
+  "estadisticas": {
+    "vida": 100,
+    "sbt": 50,
+    "hambre": 0
+  },
+  "items": [
+    {
+      "codigo": "ESPADA_MADERA",
+      "cantidad": 1
+    },
+    {
+      "codigo": "POCION_VIDA",
+      "cantidad": 3
+    }
+  ],
+  "ultimoGuardado": "PUEBLO_INICIAL",
+  "miembros": [
+    {
+      "nombre": "Aliado1",
+      "skin": "",
+      "estadisticas": {
+        "vida": 80,
+        "sbt": 40,
+        "hambre": 10
+      }
+    }
+  ]
+}
